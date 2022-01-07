@@ -18,11 +18,11 @@ BuildRequires : buildreq-distutils3
 Provides: pyperf
 Provides: pyperf-python
 Provides: pyperf-python3
-BuildRequires : pluggy
+BuildRequires : pypi(pluggy)
 BuildRequires : py-python
 BuildRequires : pytest
 BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(virtualenv)
 
 %description
 ******
