@@ -4,7 +4,7 @@
 #
 Name     : pypi-pyperf
 Version  : 2.3.1
-Release  : 25
+Release  : 26
 URL      : https://files.pythonhosted.org/packages/d6/4d/a1bc52b347c6bc63adcfe162ebb27948d36dc754e330c4032122a94b215d/pyperf-2.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d6/4d/a1bc52b347c6bc63adcfe162ebb27948d36dc754e330c4032122a94b215d/pyperf-2.3.1.tar.gz
 Summary  : Python module to run and analyze benchmarks
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656382807
+export SOURCE_DATE_EPOCH=1656399503
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
