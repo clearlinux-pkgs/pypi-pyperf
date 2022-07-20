@@ -1,5 +1,5 @@
 PKG_NAME := pypi-pyperf
-URL = https://files.pythonhosted.org/packages/d6/4d/a1bc52b347c6bc63adcfe162ebb27948d36dc754e330c4032122a94b215d/pyperf-2.3.1.tar.gz
+URL = https://files.pythonhosted.org/packages/2a/f4/a2e794597b709848b13833e3e0da3a7c6417ed3c82b469b01deb3429df34/pyperf-2.4.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
