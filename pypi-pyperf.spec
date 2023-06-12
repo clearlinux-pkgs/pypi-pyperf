@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-pyperf
-Version  : 2.6.0
-Release  : 36
-URL      : https://files.pythonhosted.org/packages/15/72/546e8ee9f52ba73cd8590db4fa09d9ecf3d90a6442edf710c883d8c918e1/pyperf-2.6.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/15/72/546e8ee9f52ba73cd8590db4fa09d9ecf3d90a6442edf710c883d8c918e1/pyperf-2.6.0.tar.gz
+Version  : 2.6.1
+Release  : 37
+URL      : https://files.pythonhosted.org/packages/67/0a/d842997a16cc52849470940d8d107162d3d15f8ab9a015f6cd321f6cb061/pyperf-2.6.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/67/0a/d842997a16cc52849470940d8d107162d3d15f8ab9a015f6cd321f6cb061/pyperf-2.6.1.tar.gz
 Summary  : Python module to run and analyze benchmarks
 Group    : Development/Tools
 License  : MIT
@@ -16,7 +16,6 @@ Requires: pypi-pyperf-license = %{version}-%{release}
 Requires: pypi-pyperf-python = %{version}-%{release}
 Requires: pypi-pyperf-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(psutil)
 BuildRequires : pypi(py)
 BuildRequires : pypi(setuptools)
 BuildRequires : pypi-pluggy
@@ -73,10 +72,10 @@ python3 components for the pypi-pyperf package.
 
 
 %prep
-%setup -q -n pyperf-2.6.0
-cd %{_builddir}/pyperf-2.6.0
+%setup -q -n pyperf-2.6.1
+cd %{_builddir}/pyperf-2.6.1
 pushd ..
-cp -a pyperf-2.6.0 buildavx2
+cp -a pyperf-2.6.1 buildavx2
 popd
 
 %build
@@ -84,15 +83,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679672906
+export SOURCE_DATE_EPOCH=1686584206
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
