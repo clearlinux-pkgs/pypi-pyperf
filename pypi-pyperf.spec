@@ -5,7 +5,7 @@
 #
 Name     : pypi-pyperf
 Version  : 2.6.1
-Release  : 37
+Release  : 38
 URL      : https://files.pythonhosted.org/packages/67/0a/d842997a16cc52849470940d8d107162d3d15f8ab9a015f6cd321f6cb061/pyperf-2.6.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/67/0a/d842997a16cc52849470940d8d107162d3d15f8ab9a015f6cd321f6cb061/pyperf-2.6.1.tar.gz
 Summary  : Python module to run and analyze benchmarks
